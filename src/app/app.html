@@ -7,8 +7,23 @@
 
   <ion-content>
     <ion-list>
-      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
-        {{p.title}}
+      <ion-list-header>Main</ion-list-header>
+      <button menuClose ion-item  (click)="openPage(homePage)">
+        Home
+      </button>
+
+      <button menuClose ion-item  (click)="openPage(goalsPage)">
+        S.M.A.R.T. Goals
+      </button>
+
+      <ion-list-header>Workbooks</ion-list-header>
+      <button menuClose ion-item *ngFor="let wb of workbooks" (click)="openPageById(wb.id)">
+        <ion-icon name="md-create"></ion-icon>
+        {{wb.title}}
+      </button>
+      <ion-list-header>Misc</ion-list-header>
+      <button menuClose ion-item  (click)="openPage(notesPage)">
+        Notes
       </button>
     </ion-list>
   </ion-content>

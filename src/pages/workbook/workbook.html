@@ -3,13 +3,23 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Page One</ion-title>
+    <ion-title>Workbook</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
   <h3>{{ workbook.title }}</h3>
 
-    <ion-label fixed>Goals</ion-label>
-    <ion-input type="text"  placeholder="Adds some goals here."></ion-input>
+  <button ion-button (click)="presentModal()" outline>View Examples</button>
+  <button (click)="wbSave()" ion-button>Save</button>
+
+  <ion-list>
+
+    <ion-item>
+      <ion-label fixed>Goals</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-textarea rows="10" cols="5" [(ngModel)]="workbook.goalsValue"></ion-textarea>
+    </ion-item>
+  </ion-list>
 </ion-content>

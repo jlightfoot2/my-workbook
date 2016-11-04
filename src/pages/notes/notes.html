@@ -3,16 +3,16 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Page One</ion-title>
+    <ion-title>Notes</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <h3>Notes</h3>
+  <button (click)="saveNotes()" ion-button>Save</button>
 
-  <p>
-    Notes Go Here
-  </p>
-
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+  <ion-list>
+    <ion-item>
+      <ion-textarea rows="10" cols="5" [(ngModel)]="notes"></ion-textarea>
+    </ion-item>
+  </ion-list>
 </ion-content>

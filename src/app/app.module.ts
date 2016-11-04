@@ -5,6 +5,7 @@ import { MyApp } from './app.component';
 import { Page1 } from '../pages/page1/page1';
 import { Page2 } from '../pages/page2/page2';
 import { Workbook } from '../pages/workbook/workbook';
+import { Example } from '../pages/workbook/example/example';
 import { HomePage } from '../pages/home/home';
 import { NotesPage } from '../pages/notes/notes';
 import { GoalsPage } from '../pages/goals/goals';
@@ -18,7 +19,8 @@ import {WorkbookService} from '../services/workbook.service';
     HomePage,
     NotesPage,
     GoalsPage,
-    Workbook
+    Workbook,
+    Example 
   ],
   imports: [
     IonicModule.forRoot(MyApp),
@@ -32,7 +34,8 @@ import {WorkbookService} from '../services/workbook.service';
     HomePage,
     NotesPage,
     GoalsPage,
-    Workbook
+    Workbook,
+    Example 
   ],
   providers: [WorkbookService]
 })
